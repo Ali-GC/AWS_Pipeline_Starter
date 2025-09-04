@@ -9,7 +9,7 @@ phases:
   pre_build:
     commands:
       -echo "Logging in to DockerHub"
-      -echo "$SECRET_PASSWORD" | docker login -u "$SECRET_USERNAME" --password-stdin
+      - echo "$SECRET_PASSWORD" | docker login -u "$SECRET_USERNAME" --password-stdin
 
   build:
     commands:
@@ -20,7 +20,7 @@ phases:
     commands:
       -echo "Pushing Docker Image..."
       -docker push alichocr/pottery-db:latest
-      
+
 artifacts:
   files:
     - Dockerfile
