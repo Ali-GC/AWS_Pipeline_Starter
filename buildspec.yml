@@ -18,8 +18,8 @@ phases:
 
   post_build:
     commands:
-      -echo "Pushing Docker Image..."
-      -docker push alichocr/pottery-db:latest
+      - echo "Pushing Docker Image..."
+      - docker push alichocr/pottery-db:latest
 
 artifacts:
   files:
