@@ -8,7 +8,7 @@ env:
 phases:
   pre_build:
     commands:
-      -echo "Logging in to DockerHub"
+      - echo Logging in to DockerHub
       - echo "$SECRET_PASSWORD" | docker login -u "$SECRET_USERNAME" --password-stdin
 
   build:
